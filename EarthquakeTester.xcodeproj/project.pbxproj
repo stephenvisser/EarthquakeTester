@@ -13,6 +13,11 @@
 		37993D971C6EE688000621F7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37993D961C6EE688000621F7 /* Assets.xcassets */; };
 		37993D9A1C6EE688000621F7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37993D981C6EE688000621F7 /* LaunchScreen.storyboard */; };
 		37993DA51C6EE688000621F7 /* EarthquakeTesterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37993DA41C6EE688000621F7 /* EarthquakeTesterTests.swift */; };
+		37993DB01C6EE69F000621F7 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37993DAF1C6EE69F000621F7 /* CoreMotion.framework */; };
+		37993DB21C6EE700000621F7 /* Motion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37993DB11C6EE700000621F7 /* Motion.swift */; };
+		379940FC1C70044B000621F7 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 379940FA1C70044B000621F7 /* RxCocoa.framework */; };
+		379940FD1C70044B000621F7 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 379940FB1C70044B000621F7 /* RxSwift.framework */; };
+		379941031C703DAC000621F7 /* ViewGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 379941021C703DAC000621F7 /* ViewGenerator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +41,11 @@
 		37993DA01C6EE688000621F7 /* EarthquakeTesterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EarthquakeTesterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		37993DA41C6EE688000621F7 /* EarthquakeTesterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EarthquakeTesterTests.swift; sourceTree = "<group>"; };
 		37993DA61C6EE688000621F7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		37993DAF1C6EE69F000621F7 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
+		37993DB11C6EE700000621F7 /* Motion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Motion.swift; sourceTree = "<group>"; };
+		379940FA1C70044B000621F7 /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
+		379940FB1C70044B000621F7 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
+		379941021C703DAC000621F7 /* ViewGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewGenerator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +53,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				379940FC1C70044B000621F7 /* RxCocoa.framework in Frameworks */,
+				379940FD1C70044B000621F7 /* RxSwift.framework in Frameworks */,
+				37993DB01C6EE69F000621F7 /* CoreMotion.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,6 +72,9 @@
 		37993D831C6EE688000621F7 = {
 			isa = PBXGroup;
 			children = (
+				379940FA1C70044B000621F7 /* RxCocoa.framework */,
+				379940FB1C70044B000621F7 /* RxSwift.framework */,
+				37993DAF1C6EE69F000621F7 /* CoreMotion.framework */,
 				37993D8E1C6EE688000621F7 /* EarthquakeTester */,
 				37993DA31C6EE688000621F7 /* EarthquakeTesterTests */,
 				37993D8D1C6EE688000621F7 /* Products */,
@@ -83,6 +99,8 @@
 				37993D961C6EE688000621F7 /* Assets.xcassets */,
 				37993D981C6EE688000621F7 /* LaunchScreen.storyboard */,
 				37993D9B1C6EE688000621F7 /* Info.plist */,
+				37993DB11C6EE700000621F7 /* Motion.swift */,
+				379941021C703DAC000621F7 /* ViewGenerator.swift */,
 			);
 			path = EarthquakeTester;
 			sourceTree = "<group>";
@@ -106,6 +124,7 @@
 				37993D881C6EE688000621F7 /* Sources */,
 				37993D891C6EE688000621F7 /* Frameworks */,
 				37993D8A1C6EE688000621F7 /* Resources */,
+				379941011C703AA8000621F7 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -146,6 +165,7 @@
 				TargetAttributes = {
 					37993D8B1C6EE688000621F7 = {
 						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = L9LZVGCP3F;
 					};
 					37993D9F1C6EE688000621F7 = {
 						CreatedOnToolsVersion = 7.2.1;
@@ -192,13 +212,33 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		379941011C703AA8000621F7 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/RxSwift.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RxCocoa.framework",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		37993D881C6EE688000621F7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				37993D921C6EE688000621F7 /* ViewController.swift in Sources */,
+				37993DB21C6EE700000621F7 /* Motion.swift in Sources */,
 				37993D901C6EE688000621F7 /* AppDelegate.swift in Sources */,
+				379941031C703DAC000621F7 /* ViewGenerator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -327,10 +367,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = EarthquakeTester/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ca.svper.EarthquakeTester;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -338,10 +385,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = EarthquakeTester/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ca.svper.EarthquakeTester;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
